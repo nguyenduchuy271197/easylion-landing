@@ -14,8 +14,8 @@ const routes = [
     label: "개발 현황",
   },
   {
-    id: "reviews",
-    path: "#reviews",
+    id: "portfolio",
+    path: "#portfolio",
     label: "포트폴리오",
   },
   {

@@ -5,7 +5,7 @@ import React from "react";
 const titleVariants = cva("capitalize", {
   variants: {
     variant: {
-      h1: "text-4xl md:text-5xl font-bold",
+      h1: "text-4xl md:text-5xl font-bold leading-[1.2]",
       h2: "text-3xl font-bold sm:text-4xl",
     },
   },

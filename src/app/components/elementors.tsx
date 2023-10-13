@@ -2,24 +2,45 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Title } from "@/components/ui/title";
 import Image from "next/image";
 
-const elementors = [
+const elementors: Elementor[] = [
   {
     label: "개발자 수",
-    value: "12,419명",
+    value: 12419,
+    postfix: "명",
   },
   {
     label: "서비스 완성 수",
-    value: "1,569",
+    value: 1569,
   },
   {
     label: "서비스 진행 국가",
-    value: "3개국",
+    value: 3,
+    postfix: "개국",
   },
   {
     label: "파트너사",
-    value: "200+",
+    value: 200,
+    postfix: "+",
   },
 ];
+
+interface Elementor {
+  value: number;
+  label: string;
+  postfix?: string;
+}
+
+function Elementor({ value, label, postfix }: Elementor) {
+  return (
+    <div className="space-y-2">
+      <h4 className="text-4xl font-bold sm:text-5xl">
+        {value.toLocaleString()}
+        {postfix}
+      </h4>
+      <p className="text-xl text-foreground/80">{label}</p>
+    </div>
+  );
+}
 
 export default function Elementors() {
   return (
@@ -45,14 +66,7 @@ export default function Elementors() {
             </Title>
             <div className="grid gap-12 sm:grid-cols-2 sm:gap-8">
               {elementors.map((elementor) => (
-                <div key={elementor.label} className="space-y-2">
-                  <h4 className="text-4xl font-bold sm:text-5xl">
-                    {elementor.value}
-                  </h4>
-                  <p className="text-xl text-foreground/80">
-                    {elementor.label}
-                  </p>
-                </div>
+                <Elementor key={elementor.label} {...elementor} />
               ))}
             </div>
           </div>

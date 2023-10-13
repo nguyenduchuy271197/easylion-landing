@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Portfolio() {
   return (
-    <section>
+    <section id="portfolio">
       <div className="mx-auto max-w-screen-lg px-8">
         <div className="space-y-16">
           <div className="space-y-6">
