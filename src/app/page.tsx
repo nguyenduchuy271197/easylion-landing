@@ -11,10 +11,8 @@ import Portfolio from "./components/portfolio";
 export default function HomePage() {
   return (
     <div className="space-y-28 sm:space-y-40 [&_section]:scroll-mt-12 pb-20">
-      <div className="space-y-28">
-        <Hero />
-        <Reasons />
-      </div>
+      <Hero />
+      <Reasons />
       <Portfolio />
       <Process />
       <Elementors />

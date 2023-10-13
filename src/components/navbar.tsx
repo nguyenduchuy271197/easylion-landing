@@ -9,8 +9,8 @@ const routes = [
     label: "EASYLION 소개",
   },
   {
-    id: "process",
-    path: "#process",
+    id: "elementors",
+    path: "#elementors",
     label: "개발 현황",
   },
   {
@@ -19,13 +19,13 @@ const routes = [
     label: "포트폴리오",
   },
   {
-    id: "faq",
-    path: "#faq",
+    id: "process",
+    path: "#process",
     label: "진행 과정",
   },
   {
-    id: "faq",
-    path: "#faq",
+    id: "reviews",
+    path: "#reviews",
     label: "고객 리뷰",
   },
   {

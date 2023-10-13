@@ -46,7 +46,7 @@ export default function Elementors() {
   return (
     <section
       className="dark:bg-[url('/background/elementor-bg.avif')] bg-cover"
-      id="about"
+      id="elementors"
     >
       <div className="container">
         <div className="flex flex-col gap-16 lg:gap-8 lg:flex-row lg:items-center lg:[&>div]:flex-1 py-28">
