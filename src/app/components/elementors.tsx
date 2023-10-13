@@ -1,6 +1,10 @@
+"use client";
+
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Title } from "@/components/ui/title";
 import Image from "next/image";
+import CountUp from "@/components/count-up";
+import VisibilitySensor from "react-visibility-sensor";
 
 const elementors: Elementor[] = [
   {
@@ -34,8 +38,7 @@ function Elementor({ value, label, postfix }: Elementor) {
   return (
     <div className="space-y-2">
       <h4 className="text-4xl font-bold sm:text-5xl">
-        {value.toLocaleString()}
-        {postfix}
+        <CountUp start={0} end={value} suffix={postfix} enableScrollSpy />
       </h4>
       <p className="text-xl text-foreground/80">{label}</p>
     </div>

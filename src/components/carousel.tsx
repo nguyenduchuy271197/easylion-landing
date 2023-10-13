@@ -19,6 +19,7 @@ export default function Carousel({ children }: { children: ReactNode }) {
             slidesPerView: 2.2,
           },
         }}
+        loop={true}
         spaceBetween={30}
         navigation={true}
         modules={[Navigation]}

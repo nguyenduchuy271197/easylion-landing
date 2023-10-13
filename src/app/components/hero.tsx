@@ -20,19 +20,8 @@ export default function Hero() {
           <div className="relative">
             <div className="lg:h-[calc(100vh-var(--navbar-height))] flex items-center max-w-3xl py-10">
               <div className="space-y-8">
-                <div>
-                  <Button variant="outline" size="sm">
-                    Get your ticket
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Button>
-                </div>
                 <div className="space-y-8">
-                  <Title
-                    variant="h1"
-                    style={{
-                      lineHeight: 1.2,
-                    }}
-                  >
+                  <Title variant="h1">
                     세상에서{" "}
                     <span className="text-gradient">
                       가장 빠르고 가장 저렴한
