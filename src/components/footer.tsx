@@ -41,7 +41,7 @@ const contacts: Contact[] = [
     icon: ScrollText,
     label: "Certification",
     value:
-      "사업자 번호 : 264-88-01106|통신판매업 신고번호 : 2019 - 서울강남 - 00774",
+      "사업자 번호 : 264-88-01106 | 통신판매업 신고번호 : 2019 - 서울강남 - 00774",
   },
   {
     icon: Mail,

@@ -6,7 +6,7 @@ export default function CTA() {
   return (
     <section>
       <div className="max-w-screen-lg mx-auto px-8">
-        <div className="px-8 py-12 rounded-3xl bg-gradient-to-r from-green-600 via-green-600 to-green-400 relative flex flex-col gap-4">
+        <div className="px-8 py-12 rounded-3xl bg-gradient-to-r from-green-400 via-green-600 to-green-600 relative flex flex-col items-end gap-4">
           <div className="flex flex-col items-center md:items-start gap-4 md:max-w-md text-center md:text-left max-w-none">
             <div className="space-y-4">
               <h3 className="text-2xl font-bold sm:text-3xl">
@@ -24,11 +24,11 @@ export default function CTA() {
             </Button>
           </div>
           <Image
-            src="/background/woman-hero.png"
-            alt=""
-            className="md:absolute left-[60%] bottom-0 mx-auto"
-            width={280}
-            height={280}
+            src="/woman-cta.png"
+            alt="Woman CTA"
+            className="md:absolute right-[60%] bottom-0 mx-auto"
+            width={300}
+            height={300}
           />
         </div>
       </div>

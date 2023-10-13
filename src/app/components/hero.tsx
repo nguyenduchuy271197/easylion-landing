@@ -22,11 +22,9 @@ export default function Hero() {
               <div className="space-y-8">
                 <div className="space-y-8">
                   <Title variant="h1">
-                    세상에서{" "}
-                    <span className="text-gradient">
-                      가장 빠르고 가장 저렴한
-                    </span>{" "}
-                    개발 이지라이언이 함께 하겠습니다
+                    <span className="text-gradient">초단기간</span>
+                    <br />
+                    합리적인 <span className="text-gradient">개발 가격</span>
                   </Title>
                   <p className="text-foreground/80 text-xl">
                     EASYLION은 단순한 비지니스 파트너가 아닙니다. 우리는 함께
@@ -40,13 +38,13 @@ export default function Hero() {
                 </div>
               </div>
             </div>
-            <div className="lg:absolute bottom-0 left-[60%]">
+            <div className="lg:absolute bottom-0 left-[70%]">
               <Image
-                width={500}
-                height={500}
-                alt=""
-                src="/background/woman-hero.png"
-                className="mx-auto w-auto h-auto"
+                width={300}
+                height={300}
+                alt="Woman Hero"
+                src="/woman-hero.png"
+                className="mx-auto"
               />
             </div>
           </div>
