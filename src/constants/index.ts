@@ -1,8 +1,17 @@
-export const HOME_PATH = "/";
-export const HOME_LABEL = "Home";
-
-export const ABOUT_PATH = "/about";
-export const ABOUT_LABEL = "About";
-
-export const CONTACT_PATH = "/contact";
-export const CONTACT_LABEL = "Contact";
+export const FAQs = [
+  {
+    id: "1",
+    question: "Is it accessible?",
+    answer: "Yes. It adheres to the WAI-ARIA design pattern.",
+  },
+  {
+    id: "2",
+    question: "Is it accessible?",
+    answer: "Yes. It adheres to the WAI-ARIA design pattern.",
+  },
+  {
+    id: "3",
+    question: "Is it accessible?",
+    answer: "Yes. It adheres to the WAI-ARIA design pattern.",
+  },
+];

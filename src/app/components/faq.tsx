@@ -5,37 +5,43 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { FAQs } from "@/constants";
+import Image from "next/image";
 
 export default function FAQ() {
   return (
     <section id="faq">
-      <div className="max-w-lg mx-auto px-8 text-lg">
+      <div className="max-w-4xl mx-auto px-8 text-lg">
         <div className="space-y-16">
-          <Title variant="h2">
-            Các câu hỏi <span className="text-gradient">thường gặp</span>
-          </Title>
+          <div className="space-y-6">
+            <Image
+              src="/question.png"
+              alt="Questions"
+              width={60}
+              height={60}
+              className="mx-auto"
+            />
+            <Title variant="h2" className="text-center">
+              <span className="text-gradient">자주 묻는</span> 질문
+            </Title>
+          </div>
+
           <div className="">
-            <Accordion type="single" collapsible className="w-full">
-              <AccordionItem value="item-1">
-                <AccordionTrigger>Is it accessible?</AccordionTrigger>
-                <AccordionContent>
-                  Yes. It adheres to the WAI-ARIA design pattern.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-2">
-                <AccordionTrigger>Is it styled?</AccordionTrigger>
-                <AccordionContent>
-                  Yes. It comes with default styles that matches the other
-                  components&apos; aesthetic.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-3">
-                <AccordionTrigger>Is it animated?</AccordionTrigger>
-                <AccordionContent>
-                  Yes. Its animated by default, but you can disable it if you
-                  prefer.
-                </AccordionContent>
-              </AccordionItem>
+            <Accordion type="single" collapsible className="w-full space-y-4">
+              {FAQs.map((faq) => (
+                <AccordionItem
+                  value={faq.id}
+                  className="border rounded-md px-8 py-2 bg-muted"
+                  key={faq.id}
+                >
+                  <AccordionTrigger className="text-xl">
+                    Is it accessible?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-base">
+                    Yes. It adheres to the WAI-ARIA design pattern.
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
             </Accordion>
           </div>
         </div>
