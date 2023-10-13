@@ -19,8 +19,8 @@ export default function Portfolio() {
             </Title>
           </div>
 
-          <div className="md:p-12 p-6 bg-gradient-to-r from-green-600 via-green-600 to-green-400 rounded-lg">
-            <video autoPlay className="w-full rounded-lg" muted>
+          <div className="p-4 bg-gradient-to-r from-green-600 via-green-600 to-green-400 rounded-lg">
+            <video autoPlay className="w-full rounded-sm" muted>
               <source src="/assets/likelion.mp4" type="video/mp4" />
               Sorry, your browser doesn&apos;t support videos.
             </video>
