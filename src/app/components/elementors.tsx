@@ -4,7 +4,6 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Title } from "@/components/ui/title";
 import Image from "next/image";
 import CountUp from "@/components/count-up";
-import VisibilitySensor from "react-visibility-sensor";
 
 const elementors: Elementor[] = [
   {
