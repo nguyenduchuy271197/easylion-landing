@@ -43,7 +43,7 @@ export default function Hero() {
                 width={300}
                 height={300}
                 alt="Woman Hero"
-                src="/woman-hero.png"
+                src="https://i.imgur.com/ygqY4L0.png"
                 className="mx-auto"
               />
             </div>

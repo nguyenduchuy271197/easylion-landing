@@ -24,7 +24,7 @@ export default function CTA() {
             </Button>
           </div>
           <Image
-            src="/woman-cta.png"
+            src="https://i.imgur.com/kHR4oTC.png"
             alt="Woman CTA"
             className="md:absolute right-[60%] bottom-0 mx-auto"
             width={300}
