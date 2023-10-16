@@ -7,7 +7,7 @@ export default function Hero() {
     <section className="dark:bg-[url('/background/hero-bg.avif')] bg-right bg-cover pt-[var(--navbar-height)]">
       <div className="container">
         <div className="relative">
-          <div className="lg:h-[calc(100vh-var(--navbar-height))] flex items-center max-w-3xl py-10">
+          <div className="lg:h-[calc(100vh-var(--navbar-height))] flex items-center max-w-3xl py-10 max-h-[700px]">
             <div className="space-y-8 max-w-xl">
               <div className="space-y-8">
                 <Title
