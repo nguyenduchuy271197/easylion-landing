@@ -1,19 +1,13 @@
-import {
-  CONSULTANTS,
-  SERVICES,
-  applyFormSchema,
-} from "@/app/apply/components/apply-form";
+import { applyFormSchema } from "@/app/apply/components/apply-form";
+import { CONSULTANTS, SERVICES } from "@/constants";
 import {
   Body,
-  Button,
   Container,
   Column,
   Head,
-  Heading,
   Hr,
   Html,
   Img,
-  Link,
   Preview,
   Row,
   Section,

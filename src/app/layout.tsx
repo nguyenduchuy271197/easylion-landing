@@ -13,7 +13,6 @@ import ReactQueryProvider from "@/components/react-query-provider";
 import { Toaster } from "sonner";
 import Chat from "@/components/chat";
 import StickyButtonProvider from "@/providers/stick-button-provider";
-import StickyButton from "@/components/sticky-button";
 
 const quicksandFont = Quicksand({
   subsets: ["vietnamese"],
@@ -46,7 +45,6 @@ export default function RootLayout({
               <Footer />
               <Toaster position="top-center" />
               <Chat />
-              <StickyButton />
             </StickyButtonProvider>
           </ThemeProvider>
         </ReactQueryProvider>

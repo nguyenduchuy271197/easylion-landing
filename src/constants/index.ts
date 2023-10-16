@@ -116,26 +116,30 @@ export const REASONS = [
     description:
       "EASYLION은 개발뿐만 아니라 고객이 원하는 사업에 대한 시장 리서칭을 함께 진행함으로, 단순 외주가 아닌 파트너로서 함께합니다.",
     highlight: false,
+    src: "/reasons/1.png",
   },
   {
     title: "딱 맞는 전문가 보유",
     description:
       "웹/앱 및 시스템 개발 및 디자인 등 각 분야별 전문가 풀을 보유하고 있어, 고객이 원하는 사업에 대해 즉각적인 플래닝이 가능합니다.",
     highlight: true,
+    src: "/reasons/2.png",
   },
   {
     title: "프로젝트 매니징",
     description:
       "전문 PM이 개발자들과 직접 소통하며 전문 개발 과정에 대한 이해를 돕기위해 프로젝트 단계별로 공유합니다.",
     highlight: true,
+    src: "/reasons/3.png",
   },
   {
     title: "합리적인 가격",
     description:
       "기간에 따라 비용을 책정하는 방식이 아닌, 프로덕트의 기능에 따른 책정으로 무분별한 비용 낭비를 사전에 예방할 수 있습니다.",
     highlight: false,
+    src: "/reasons/4.png",
   },
-] as const;
+];
 
 export const REVIEWS = [
   {
