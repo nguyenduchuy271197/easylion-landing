@@ -13,12 +13,14 @@ export default function HomePage() {
     <div className="space-y-28 sm:space-y-40 [&_section]:scroll-mt-12 pb-20">
       <Hero />
       <Reasons />
+      <Elementors />
       <Portfolio />
       <Process />
-      <Elementors />
       <CTA />
-      <Reviews />
-      <FAQ />
+      <div className="space-y-10 sm:space-y-20">
+        <Reviews />
+        <FAQ />
+      </div>
     </div>
   );
 }

@@ -4,28 +4,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Title } from "@/components/ui/title";
 import Image from "next/image";
 import CountUp from "@/components/count-up";
-
-const elementors: Elementor[] = [
-  {
-    label: "개발자 수",
-    value: 12419,
-    postfix: "명",
-  },
-  {
-    label: "서비스 완성 수",
-    value: 1569,
-  },
-  {
-    label: "서비스 진행 국가",
-    value: 3,
-    postfix: "개국",
-  },
-  {
-    label: "파트너사",
-    value: 200,
-    postfix: "+",
-  },
-];
+import { elementors } from "@/constants";
 
 interface Elementor {
   value: number;
@@ -78,7 +57,7 @@ export default function Elementors() {
               className="w-full max-w-2xl mx-auto overflow-hidden rounded-lg lg:max-w-none"
             >
               <Image
-                src="/hero.jpg"
+                src="/discussion.jpg"
                 alt="Advance your journey with expertise around the world"
                 fill
                 className="object-cover"

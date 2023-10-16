@@ -6,6 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { FAQs } from "@/constants";
+import Markdown from "react-markdown";
 import Image from "next/image";
 
 export default function FAQ() {
@@ -34,11 +35,11 @@ export default function FAQ() {
                   className="border rounded-md px-8 py-2 bg-muted"
                   key={faq.id}
                 >
-                  <AccordionTrigger className="text-xl">
-                    Is it accessible?
+                  <AccordionTrigger className="text-xl text-left">
+                    {faq.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-base">
-                    Yes. It adheres to the WAI-ARIA design pattern.
+                    <Markdown>{faq.answer}</Markdown>
                   </AccordionContent>
                 </AccordionItem>
               ))}

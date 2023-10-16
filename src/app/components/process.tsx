@@ -1,55 +1,23 @@
 import { Title } from "@/components/ui/title";
-
-interface Step {
-  title: string;
-  description: string;
-  src: string;
-}
-
-const steps: Step[] = [
-  {
-    title: "I work for the ‘company’.",
-    description:
-      "To be precise, we work for the company's people = talent, and the company's competitiveness = growth. This is the purpose of implementation pursued by IMHR and the standard for judging value.",
-    src: "",
-  },
-  {
-    title: "I work for the ‘company’.",
-    description:
-      "To be precise, we work for the company's people = talent, and the company's competitiveness = growth. This is the purpose of implementation pursued by IMHR and the standard for judging value.",
-    src: "",
-  },
-  {
-    title: "I work for the ‘company’.",
-    description:
-      "To be precise, we work for the company's people = talent, and the company's competitiveness = growth. This is the purpose of implementation pursued by IMHR and the standard for judging value.",
-    src: "",
-  },
-  {
-    title: "I work for the ‘company’.",
-    description:
-      "To be precise, we work for the company's people = talent, and the company's competitiveness = growth. This is the purpose of implementation pursued by IMHR and the standard for judging value.",
-    src: "",
-  },
-];
+import { steps } from "@/constants";
+import Image from "next/image";
 
 export default function Process() {
   return (
     <section className="bg-center bg-cover" id="process">
       <div className="container">
         <div className="space-y-16">
-          <Title variant="h2">What we do</Title>
-          <div className="">
+          <Title variant="h2">
+            우리는 <span className="text-gradient">이렇게</span> 함께합니다
+          </Title>
+          <div className="grid lg:grid-cols-[1fr_350px] gap-8">
             <ul className="flex flex-col gap-8">
               {steps.map((step, index) => (
                 <li
                   key={index}
-                  className="flex flex-col max-w-4xl gap-2 p-8 border-2 rounded-lg sm:flex-row sm:items-center sm:gap-8 bg-muted/50"
-                  // style={{
-                  //   marginLeft: `${index * 4}rem`,
-                  // }}
+                  className="flex flex-col gap-4 p-8 border-2 rounded-lg sm:flex-row sm:items-center sm:gap-8 bg-muted/50"
                 >
-                  <div className="font-bold text-red-300/40 text-8xl shrink-0">
+                  <div className="font-bold text-green-300/10 text-7xl sm:text-8xl shrink-0">
                     {index + 1}
                   </div>
                   <div className="flex-1 space-y-2">
@@ -61,6 +29,14 @@ export default function Process() {
                 </li>
               ))}
             </ul>
+            <div className="hidden lg:block w-full h-full relative rounded-lg overflow-hidden">
+              <Image
+                src="/process.avif"
+                alt="Process"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>
