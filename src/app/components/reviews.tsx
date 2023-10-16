@@ -4,7 +4,7 @@ import { Title } from "@/components/ui/title";
 import Image from "next/image";
 import { SwiperSlide } from "swiper/react";
 import Carousel from "@/components/carousel";
-import { reviews } from "@/constants";
+import { REVIEWS } from "@/constants";
 
 interface Review {
   name: string;
@@ -54,7 +54,7 @@ export default function Reviews() {
         <div className="space-y-16">
           <Title variant="h2">고객리뷰 ❤️</Title>
           <Carousel>
-            {reviews.map((review, index) => (
+            {REVIEWS.map((review, index) => (
               <SwiperSlide key={index}>
                 <ReviewCard {...review} />
               </SwiperSlide>

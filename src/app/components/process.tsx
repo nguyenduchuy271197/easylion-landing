@@ -1,5 +1,5 @@
 import { Title } from "@/components/ui/title";
-import { steps } from "@/constants";
+import { STEPS } from "@/constants";
 import Image from "next/image";
 
 export default function Process() {
@@ -12,7 +12,7 @@ export default function Process() {
           </Title>
           <div className="grid lg:grid-cols-[1fr_350px] gap-8">
             <ul className="flex flex-col gap-8">
-              {steps.map((step, index) => (
+              {STEPS.map((step, index) => (
                 <li
                   key={index}
                   className="flex flex-col gap-4 p-8 border-2 rounded-lg sm:flex-row sm:items-center sm:gap-8 bg-muted/50"

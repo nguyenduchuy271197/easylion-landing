@@ -1,4 +1,4 @@
-import { networks } from "@/constants";
+import { NETWORKS } from "@/constants";
 import Image from "next/image";
 
 export default function Networks() {
@@ -6,7 +6,7 @@ export default function Networks() {
     <section>
       <div className="max-w-screen-lg mx-auto px-8">
         <div className="flex flex-wrap items-center justify-center gap-20 gap-y-6 py-28">
-          {networks.map((company) => (
+          {NETWORKS.map((company) => (
             <div className="relative h-[80px] aspect-[2/1]" key={company.title}>
               <Image
                 src={company.src}

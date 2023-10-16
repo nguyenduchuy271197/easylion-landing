@@ -24,9 +24,9 @@ export const FAQs = [
     500만원 이하 소형 프로젝트의 경우엔 일정 기간 내 무상으로 진행합니다.
     단, 중형 이상 프로젝트의 경우엔 추가 비용이 별도로 산정됩니다.`,
   },
-];
+] as const;
 
-export const elementors = [
+export const ELEMENTORS = [
   {
     label: "개발자 수",
     value: 12419,
@@ -46,9 +46,9 @@ export const elementors = [
     value: 200,
     postfix: "+",
   },
-];
+] as const;
 
-export const networks = [
+export const NETWORKS = [
   {
     title: "BMS Global",
     src: "/assets/workspaces/bms.svg",
@@ -77,9 +77,9 @@ export const networks = [
     title: "FPT",
     src: "/assets/workspaces/fpt.svg",
   },
-];
+] as const;
 
-export const steps = [
+export const STEPS = [
   {
     title: "정보 분석 및 수집",
     description:
@@ -108,9 +108,9 @@ export const steps = [
     title: "배포",
     description: "실배포를 통해 고객사에게 모든 관리자 권한을 넘겨드립니다.",
   },
-];
+] as const;
 
-export const reasons = [
+export const REASONS = [
   {
     title: "사업 파트너",
     description:
@@ -135,9 +135,9 @@ export const reasons = [
       "기간에 따라 비용을 책정하는 방식이 아닌, 프로덕트의 기능에 따른 책정으로 무분별한 비용 낭비를 사전에 예방할 수 있습니다.",
     highlight: false,
   },
-];
+] as const;
 
-export const reviews = [
+export const REVIEWS = [
   {
     name: "김OO 수석",
     avatar: "/human/man-1.svg",
@@ -204,4 +204,42 @@ export const reviews = [
     description:
       "나름 동네에서 알아주는 알아주는 맛집이었는데요, 웨이팅이 꽤 있어서 사업을 확장시키면서 고객들이 사용할 앱을 만들었는데 만들고 나니 갑자기 잘 되지 않더라구요. 저는 모르는 이유를 이지라이언에서 같이 조사 해줘서, 다시 잘 판매하고 있어요.",
   },
-];
+] as const;
+
+export const SERVICES = [
+  {
+    id: "web",
+    label: "Web",
+  },
+  {
+    id: "app",
+    label: "App",
+  },
+  {
+    id: "system_program",
+    label: "System / Program",
+  },
+  {
+    id: "etc",
+    label: "Etc.",
+  },
+] as const;
+
+export const CONSULTANTS = [
+  {
+    id: "9am_to_12am",
+    label: "9am to 12am",
+  },
+  {
+    id: "2pm_to_4pm",
+    label: "2pm to 4pm",
+  },
+  {
+    id: "4pm_to_6pm",
+    label: "4pm to 6pm",
+  },
+  {
+    id: "6pm_to_8pm",
+    label: "6pm to 8pm",
+  },
+] as const;

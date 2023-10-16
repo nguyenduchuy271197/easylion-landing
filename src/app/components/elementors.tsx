@@ -4,7 +4,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Title } from "@/components/ui/title";
 import Image from "next/image";
 import CountUp from "@/components/count-up";
-import { elementors } from "@/constants";
+import { ELEMENTORS } from "@/constants";
 
 interface Elementor {
   value: number;
@@ -52,7 +52,7 @@ export default function Elementors() {
               </div>
             </Title>
             <div className="grid gap-12 sm:grid-cols-2 sm:gap-8">
-              {elementors.map((elementor) => (
+              {ELEMENTORS.map((elementor) => (
                 <Elementor key={elementor.label} {...elementor} />
               ))}
             </div>

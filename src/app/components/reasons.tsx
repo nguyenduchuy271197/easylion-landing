@@ -1,5 +1,5 @@
 import { Title } from "@/components/ui/title";
-import { reasons } from "@/constants";
+import { REASONS } from "@/constants";
 import { cn, groupArray } from "@/lib/utils";
 import { HTMLAttributes } from "react";
 
@@ -73,7 +73,7 @@ export default function Reasons() {
             </p>
           </div>
 
-          <ReasonLayout reasons={reasons} />
+          <ReasonLayout reasons={REASONS} />
         </div>
       </div>
     </section>
