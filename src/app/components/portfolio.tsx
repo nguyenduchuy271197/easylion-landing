@@ -19,7 +19,7 @@ export default function Portfolio() {
             </Title>
           </div>
 
-          <div className="p-6 bg-gradient-to-r from-green-600 via-green-600 to-green-400 rounded-lg">
+          <div className="p-4 sm:p-6 bg-gradient-to-r from-green-600 via-green-600 to-green-400 rounded-lg">
             {/* <video autoPlay className="w-full rounded-sm" muted>
               <source src="/portfolio.gif" type="video/mp4" />
               Sorry, your browser doesn&apos;t support videos.
