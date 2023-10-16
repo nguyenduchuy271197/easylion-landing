@@ -15,20 +15,13 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
-import { Checkbox } from "@/components/ui/checkbox";
 import ApplyConfirmEmail from "@/emails";
 import { render } from "@react-email/render";
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "sonner";
 import axios from "axios";
 import { Email } from "@/app/api/apply/send-email/route";
-import {
-  BUDGET_OPTIONS,
-  CONSULTANTS,
-  CONTACT_OPTIONS,
-  PROGRESS_OPTIONS,
-  SERVICES,
-} from "@/constants";
+import { BUDGET_OPTIONS, CONTACT_OPTIONS, PROGRESS_OPTIONS } from "@/constants";
 import { Textarea } from "@/components/ui/textarea";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
@@ -46,14 +39,6 @@ export const applyFormSchema = z.object({
   content: z.string().max(160, {
     message: "Message must not be longer than 30 characters.",
   }),
-  services: z.array(z.string()).refine((value) => value.some((item) => item), {
-    message: "You have to select at least one service.",
-  }),
-  consultants: z
-    .array(z.string())
-    .refine((value) => value.some((item) => item), {
-      message: "You have to select at least one consultant.",
-    }),
   contact: z.enum(["1", "2", "3", "4", "5"], {
     required_error: "You need to select a contact type.",
   }),
@@ -73,8 +58,6 @@ export default function ApplyForm() {
       name: "",
       phone: "",
       email: "",
-      services: [],
-      consultants: [],
     },
   });
 
@@ -94,8 +77,6 @@ export default function ApplyForm() {
         email={data.email}
         phone={data.phone}
         content={data.content}
-        services={data.services}
-        consultants={data.consultants}
         contact={data.contact}
         progress={data.progress}
         budget={data.budget}
@@ -113,7 +94,7 @@ export default function ApplyForm() {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-12">
-        <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Company */}
           <FormField
             control={form.control}
@@ -194,7 +175,7 @@ export default function ApplyForm() {
           />
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto border-t pt-8">
+        <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
           <FormField
             control={form.control}
             name="contact"
@@ -205,7 +186,7 @@ export default function ApplyForm() {
                   <RadioGroup
                     onValueChange={field.onChange}
                     defaultValue={field.value}
-                    className="flex flex-col sm:flex-row sm:items-center gap-6"
+                    className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6"
                   >
                     {CONTACT_OPTIONS.map((option) => (
                       <FormItem
@@ -237,7 +218,7 @@ export default function ApplyForm() {
                   <RadioGroup
                     onValueChange={field.onChange}
                     defaultValue={field.value}
-                    className="flex items-center gap-6"
+                    className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6"
                   >
                     {PROGRESS_OPTIONS.map((option) => (
                       <FormItem
@@ -275,7 +256,7 @@ export default function ApplyForm() {
                   <RadioGroup
                     onValueChange={field.onChange}
                     defaultValue={field.value}
-                    className="flex flex-col space-y-1"
+                    className="flex flex-col gap-4"
                   >
                     {BUDGET_OPTIONS.map((option) => (
                       <FormItem
@@ -298,7 +279,7 @@ export default function ApplyForm() {
           />
         </div>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <Button type="submit" size="lg" className="w-full">
             문의하기
           </Button>

@@ -210,44 +210,6 @@ export const REVIEWS = [
   },
 ] as const;
 
-export const SERVICES = [
-  {
-    id: "web",
-    label: "Web",
-  },
-  {
-    id: "app",
-    label: "App",
-  },
-  {
-    id: "system_program",
-    label: "System / Program",
-  },
-  {
-    id: "etc",
-    label: "Etc.",
-  },
-] as const;
-
-export const CONSULTANTS = [
-  {
-    id: "9am_to_12am",
-    label: "9am to 12am",
-  },
-  {
-    id: "2pm_to_4pm",
-    label: "2pm to 4pm",
-  },
-  {
-    id: "4pm_to_6pm",
-    label: "4pm to 6pm",
-  },
-  {
-    id: "6pm_to_8pm",
-    label: "6pm to 8pm",
-  },
-] as const;
-
 export const CONTACT_OPTIONS = [
   {
     id: "1",

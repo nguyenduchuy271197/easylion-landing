@@ -1,5 +1,5 @@
 import { applyFormSchema } from "@/app/apply/components/apply-form";
-import { CONSULTANTS, SERVICES } from "@/constants";
+import { BUDGET_OPTIONS, CONTACT_OPTIONS, PROGRESS_OPTIONS } from "@/constants";
 import {
   Body,
   Container,
@@ -22,8 +22,9 @@ export default function ApplyConfirmEmail({
   name = "Huy",
   phone = "000000000",
   email = "nguyenduchuy27111997@gmail.com",
-  services = ["app", "web"],
-  consultants = ["9am_to_12am"],
+  contact = "1",
+  progress = "1",
+  budget = "1",
 }: z.infer<typeof applyFormSchema>) {
   const previewText = `New HR application!!!! - LIKELION`;
 
@@ -64,23 +65,28 @@ export default function ApplyConfirmEmail({
                 <Column>{email}</Column>
               </Row>
               <Row className="mb-4">
-                <Column className="w-40 font-bold">Services</Column>
+                <Column className="w-40 font-bold">Contact Option</Column>
                 <Column>
-                  {SERVICES.filter((_service) =>
-                    services.includes(_service.id)
-                  ).map((service) => (
-                    <Row key={service.id}>{service.label}</Row>
-                  ))}
+                  {
+                    CONTACT_OPTIONS.find((option) => option.id === contact)
+                      ?.label
+                  }
                 </Column>
               </Row>
               <Row className="mb-4">
-                <Column className="w-40 font-bold">Consultants</Column>
+                <Column className="w-40 font-bold">Progress Option</Column>
                 <Column>
-                  {CONSULTANTS.filter((_consultant) =>
-                    consultants.includes(_consultant.id)
-                  ).map((consultant) => (
-                    <Row key={consultant.id}>{consultant.label}</Row>
-                  ))}
+                  {
+                    PROGRESS_OPTIONS.find((option) => option.id === progress)
+                      ?.label
+                  }
+                </Column>
+              </Row>
+
+              <Row className="mb-4">
+                <Column className="w-40 font-bold">Budget Option</Column>
+                <Column>
+                  {BUDGET_OPTIONS.find((option) => option.id === budget)?.label}
                 </Column>
               </Row>
             </Section>
