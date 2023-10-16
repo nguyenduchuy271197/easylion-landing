@@ -20,13 +20,10 @@ export default function Portfolio() {
           </div>
 
           <div className="p-4 csm:p-6 bg-gradient-to-r from-green-600 via-green-600 to-green-400 rounded-lg">
-            {/* <video autoPlay className="w-full rounded-sm" muted>
-              <source src="/portfolio.gif" type="video/mp4" />
+            <video autoPlay className="w-full rounded-sm" muted>
+              <source src="/portfolio.mp4" type="video/mp4" />
               Sorry, your browser doesn&apos;t support videos.
-            </video> */}
-            <div className="relative w-full aspect-[16/9] rounded-sm">
-              <Image src="/portfolio.gif" alt="" fill />
-            </div>
+            </video>
           </div>
         </div>
       </div>
