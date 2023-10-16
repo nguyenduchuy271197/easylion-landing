@@ -35,6 +35,7 @@ export default function Hero() {
                 src="/woman-hero.png"
                 className="mx-auto object-contain"
                 fill
+                priority
               />
             </div>
           </div>

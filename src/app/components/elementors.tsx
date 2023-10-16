@@ -16,7 +16,13 @@ function Elementor({ value, label, postfix }: Elementor) {
   return (
     <div className="space-y-2">
       <h4 className="text-4xl font-bold sm:text-5xl">
-        <CountUp start={0} end={value} suffix={postfix} enableScrollSpy />
+        <CountUp
+          start={0}
+          end={value}
+          suffix={postfix}
+          enableScrollSpy
+          scrollSpyOnce
+        />
       </h4>
       <p className="text-xl text-foreground/80">{label}</p>
     </div>
