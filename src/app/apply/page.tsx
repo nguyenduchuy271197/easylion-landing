@@ -6,7 +6,7 @@ export default function ApplyPage() {
   return (
     <div className="flex items-center justify-center pt-32 pb-16">
       <div className="max-w-screen-xl mx-auto px-8 w-full">
-        <div className="space-y-8">
+        <div className="space-y-8 sm:space-y-16">
           <div className="space-y-6">
             <Image
               src="/question.png"
@@ -16,7 +16,7 @@ export default function ApplyPage() {
               className="mx-auto"
             />
             <Title variant="h2" className="text-center">
-              이지라이언과 함께 멋진 웹사이트를 만들어볼까요?
+              EASYLION과 함께 멋진 프로덕트를 만들어볼까요?
             </Title>
           </div>
 

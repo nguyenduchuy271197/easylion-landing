@@ -16,7 +16,7 @@ export default function FAQ() {
         <div className="space-y-16">
           <div className="space-y-6">
             <Image
-              src="/question.png"
+              src="/qa.png"
               alt="Questions"
               width={60}
               height={60}

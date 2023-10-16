@@ -80,8 +80,7 @@ export default function Reasons() {
               왜 <span className="text-gradient">EASYLION</span> 인가요?
             </Title>
             <p className="text-xl text-foreground/70">
-              EasyLion가 제공하는 것과 우리의 신뢰성은 당신이 생각하는 것
-              이상으로 나아갈 것입니다.
+              EASYLION은 프로젝트의 A-Z 전 과정을 함께 합니다.
             </p>
           </div>
 

@@ -19,7 +19,7 @@ export default function StickyButtonProvider({
 }: {
   children: ReactNode;
 }) {
-  const [heroBtnVisible, setHeroBtnVisible] = useState(false);
+  const [heroBtnVisible, setHeroBtnVisible] = useState(true);
   const [ctaBtnVisible, setCtaBtnVisible] = useState(false);
   const visible = !(heroBtnVisible || ctaBtnVisible);
 

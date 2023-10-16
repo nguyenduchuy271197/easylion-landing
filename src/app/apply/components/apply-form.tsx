@@ -22,19 +22,25 @@ import { useMutation } from "@tanstack/react-query";
 import { toast } from "sonner";
 import axios from "axios";
 import { Email } from "@/app/api/apply/send-email/route";
-import { CONSULTANTS, SERVICES } from "@/constants";
+import {
+  BUDGET_OPTIONS,
+  CONSULTANTS,
+  CONTACT_OPTIONS,
+  PROGRESS_OPTIONS,
+  SERVICES,
+} from "@/constants";
 import { Textarea } from "@/components/ui/textarea";
-import { Separator } from "@/components/ui/separator";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 export const applyFormSchema = z.object({
   company: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
+    message: "Company must be at least 2 characters.",
   }),
   name: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
+    message: "Name must be at least 2 characters.",
   }),
-  position: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
+  phone: z.string().min(2, {
+    message: "Phone must be at least 2 characters.",
   }),
   email: z.string().email(),
   content: z.string().max(160, {
@@ -46,8 +52,17 @@ export const applyFormSchema = z.object({
   consultants: z
     .array(z.string())
     .refine((value) => value.some((item) => item), {
-      message: "You have to select at least one consultants.",
+      message: "You have to select at least one consultant.",
     }),
+  contact: z.enum(["1", "2", "3", "4", "5"], {
+    required_error: "You need to select a contact type.",
+  }),
+  progress: z.enum(["1", "2", "3", "4", "5"], {
+    required_error: "You need to select a progress type.",
+  }),
+  budget: z.enum(["1", "2", "3", "4", "5"], {
+    required_error: "You need to select a budget type.",
+  }),
 });
 
 export default function ApplyForm() {
@@ -56,7 +71,7 @@ export default function ApplyForm() {
     defaultValues: {
       company: "",
       name: "",
-      position: "",
+      phone: "",
       email: "",
       services: [],
       consultants: [],
@@ -76,11 +91,14 @@ export default function ApplyForm() {
       <ApplyConfirmEmail
         company={data.company}
         name={data.name}
-        position={data.position}
         email={data.email}
+        phone={data.phone}
         content={data.content}
         services={data.services}
         consultants={data.consultants}
+        contact={data.contact}
+        progress={data.progress}
+        budget={data.budget}
       />
     );
 
@@ -95,68 +113,77 @@ export default function ApplyForm() {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-12">
-        <div className="grid grid-cols-2 gap-8 max-w-3xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+          {/* Company */}
           <FormField
             control={form.control}
             name="company"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Company</FormLabel>
+                <FormLabel>회사명</FormLabel>
                 <FormControl>
-                  <Input placeholder="" {...field} />
+                  <Input placeholder="이지라이언" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
+
+          {/* Name */}
           <FormField
             control={form.control}
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Name</FormLabel>
+                <FormLabel>이름 / 포지션</FormLabel>
                 <FormControl>
-                  <Input placeholder="" {...field} />
+                  <Input placeholder="박홍길 / 마케팅팀장" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
-          <FormField
-            control={form.control}
-            name="position"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Position</FormLabel>
-                <FormControl>
-                  <Input placeholder="" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+
+          {/* Email */}
           <FormField
             control={form.control}
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email</FormLabel>
+                <FormLabel>이메일</FormLabel>
                 <FormControl>
-                  <Input placeholder="" {...field} />
+                  <Input placeholder="easylion@likelion.net" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
+
+          {/* Phone */}
+          <FormField
+            control={form.control}
+            name="phone"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>연락처</FormLabel>
+                <FormControl>
+                  <Input placeholder="01019865432" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          {/* Content */}
           <FormField
             control={form.control}
             name="content"
             render={({ field }) => (
               <FormItem className="col-span-full">
-                <FormLabel>Message</FormLabel>
+                <FormLabel>기타 문의 사항</FormLabel>
                 <FormControl>
                   <Textarea
-                    placeholder="Tell us a little bit about yourself"
+                    placeholder="무엇이든 물어보세요."
                     className="resize-none h-44"
                     {...field}
                   />
@@ -167,54 +194,34 @@ export default function ApplyForm() {
           />
         </div>
 
-        <div className="grid grid-cols-2 gap-8 max-w-5xl mx-auto border-t pt-8">
+        <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto border-t pt-8">
           <FormField
             control={form.control}
-            name="services"
-            render={() => (
-              <FormItem>
-                <div className="mb-4">
-                  <FormLabel className="text-base">Services</FormLabel>
-                  <FormDescription>
-                    Select the services you want to use.
-                  </FormDescription>
-                </div>
-                <div className="flex items-center gap-6">
-                  {SERVICES.map((item) => (
-                    <FormField
-                      key={item.id}
-                      control={form.control}
-                      name="services"
-                      render={({ field }) => {
-                        return (
-                          <FormItem
-                            key={item.id}
-                            className="flex items-start gap-2 space-y-0"
-                          >
-                            <FormControl>
-                              <Checkbox
-                                checked={field.value?.includes(item.id)}
-                                onCheckedChange={(checked) => {
-                                  return checked
-                                    ? field.onChange([...field.value, item.id])
-                                    : field.onChange(
-                                        field.value?.filter(
-                                          (value) => value !== item.id
-                                        )
-                                      );
-                                }}
-                              />
-                            </FormControl>
-                            <FormLabel className="text-sm font-normal">
-                              {item.label}
-                            </FormLabel>
-                          </FormItem>
-                        );
-                      }}
-                    />
-                  ))}
-                </div>
-
+            name="contact"
+            render={({ field }) => (
+              <FormItem className="space-y-4">
+                <FormLabel className="text-base">희망 소통 방식</FormLabel>
+                <FormControl>
+                  <RadioGroup
+                    onValueChange={field.onChange}
+                    defaultValue={field.value}
+                    className="flex flex-col sm:flex-row sm:items-center gap-6"
+                  >
+                    {CONTACT_OPTIONS.map((option) => (
+                      <FormItem
+                        className="flex items-center gap-2 space-y-0"
+                        key={option.id}
+                      >
+                        <FormControl>
+                          <RadioGroupItem value={option.id} />
+                        </FormControl>
+                        <FormLabel className="font-normal">
+                          {option.label}
+                        </FormLabel>
+                      </FormItem>
+                    ))}
+                  </RadioGroup>
+                </FormControl>
                 <FormMessage />
               </FormItem>
             )}
@@ -222,51 +229,69 @@ export default function ApplyForm() {
 
           <FormField
             control={form.control}
-            name="consultants"
-            render={() => (
-              <FormItem>
-                <div className="mb-4">
-                  <FormLabel className="text-base">Consultant Time</FormLabel>
+            name="progress"
+            render={({ field }) => (
+              <FormItem className="space-y-4">
+                <FormLabel className="text-base">기획서 완성률</FormLabel>
+                <FormControl>
+                  <RadioGroup
+                    onValueChange={field.onChange}
+                    defaultValue={field.value}
+                    className="flex items-center gap-6"
+                  >
+                    {PROGRESS_OPTIONS.map((option) => (
+                      <FormItem
+                        className="flex items-center gap-2 space-y-0"
+                        key={option.id}
+                      >
+                        <FormControl>
+                          <RadioGroupItem value={option.id} />
+                        </FormControl>
+                        <FormLabel className="font-normal">
+                          {option.label}
+                        </FormLabel>
+                      </FormItem>
+                    ))}
+                  </RadioGroup>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="budget"
+            render={({ field }) => (
+              <FormItem className="space-y-4 col-span-full">
+                <div>
+                  <FormLabel className="text-base">예산</FormLabel>
                   <FormDescription>
-                    Select the time you want to consult.
+                    설명 - 예산내에서 퀄리티 200%의 웹사이트를 만들기 위한
+                    최선의 방법을 제안해드리겠습니다.
                   </FormDescription>
                 </div>
-                <div className="flex items-center gap-6">
-                  {CONSULTANTS.map((item) => (
-                    <FormField
-                      key={item.id}
-                      control={form.control}
-                      name="consultants"
-                      render={({ field }) => {
-                        return (
-                          <FormItem
-                            key={item.id}
-                            className="flex items-start gap-2 space-y-0"
-                          >
-                            <FormControl>
-                              <Checkbox
-                                checked={field.value?.includes(item.id)}
-                                onCheckedChange={(checked) => {
-                                  return checked
-                                    ? field.onChange([...field.value, item.id])
-                                    : field.onChange(
-                                        field.value?.filter(
-                                          (value) => value !== item.id
-                                        )
-                                      );
-                                }}
-                              />
-                            </FormControl>
-                            <FormLabel className="text-sm font-normal">
-                              {item.label}
-                            </FormLabel>
-                          </FormItem>
-                        );
-                      }}
-                    />
-                  ))}
-                </div>
-
+                <FormControl>
+                  <RadioGroup
+                    onValueChange={field.onChange}
+                    defaultValue={field.value}
+                    className="flex flex-col space-y-1"
+                  >
+                    {BUDGET_OPTIONS.map((option) => (
+                      <FormItem
+                        className="flex items-center gap-2 space-y-0"
+                        key={option.id}
+                      >
+                        <FormControl>
+                          <RadioGroupItem value={option.id} />
+                        </FormControl>
+                        <FormLabel className="font-normal">
+                          {option.label}
+                        </FormLabel>
+                      </FormItem>
+                    ))}
+                  </RadioGroup>
+                </FormControl>
                 <FormMessage />
               </FormItem>
             )}
@@ -275,7 +300,7 @@ export default function ApplyForm() {
 
         <div className="max-w-3xl mx-auto">
           <Button type="submit" size="lg" className="w-full">
-            Submit
+            문의하기
           </Button>
         </div>
       </form>

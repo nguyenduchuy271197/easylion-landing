@@ -247,3 +247,72 @@ export const CONSULTANTS = [
     label: "6pm to 8pm",
   },
 ] as const;
+
+export const CONTACT_OPTIONS = [
+  {
+    id: "1",
+    label: "카카오톡",
+  },
+  {
+    id: "2",
+    label: "이메일",
+  },
+  {
+    id: "3",
+    label: "전화통화",
+  },
+  {
+    id: "4",
+    label: "화상회의",
+  },
+  {
+    id: "5",
+    label: "상관없음",
+  },
+];
+
+export const PROGRESS_OPTIONS = [
+  {
+    id: "1",
+    label: "0%",
+  },
+  {
+    id: "2",
+    label: "25%",
+  },
+  {
+    id: "3",
+    label: "50%",
+  },
+  {
+    id: "4",
+    label: "75%",
+  },
+  {
+    id: "5",
+    label: "100%",
+  },
+];
+
+export const BUDGET_OPTIONS = [
+  {
+    id: "1",
+    label: "250만원 이하",
+  },
+  {
+    id: "2",
+    label: "250만원 ~ 500만원",
+  },
+  {
+    id: "3",
+    label: "500만원 ~ 1,000만원",
+  },
+  {
+    id: "4",
+    label: "1,000만원 ~ 2,000만원",
+  },
+  {
+    id: "5",
+    label: "2,000만원 이상",
+  },
+];

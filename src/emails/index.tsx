@@ -20,7 +20,7 @@ import z from "zod";
 export default function ApplyConfirmEmail({
   company = "LIKELION",
   name = "Huy",
-  position = "Dev",
+  phone = "000000000",
   email = "nguyenduchuy27111997@gmail.com",
   services = ["app", "web"],
   consultants = ["9am_to_12am"],
@@ -56,8 +56,8 @@ export default function ApplyConfirmEmail({
                 <Column>{name}</Column>
               </Row>
               <Row className="mb-4">
-                <Column className="w-40 font-bold">Position</Column>
-                <Column>{position}</Column>
+                <Column className="w-40 font-bold">Phone</Column>
+                <Column>{phone}</Column>
               </Row>
               <Row className="mb-4">
                 <Column className="w-40 font-bold">Email</Column>
