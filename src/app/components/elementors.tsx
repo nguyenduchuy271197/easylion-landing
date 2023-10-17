@@ -39,7 +39,7 @@ export default function Elementors() {
           <div className="space-y-12 text-center lg:text-left">
             <Title
               variant="h2"
-              className="mx-auto lg:text-left sm:max-w-lg lg:mx-0 space-y-2"
+              className="mx-auto lg:text-left sm:max-w-xl lg:mx-0 space-y-2"
             >
               <Balancer>
                 각 분야 <span className="text-gradient">전문 개발자</span>로
