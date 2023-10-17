@@ -29,7 +29,7 @@ export default function Hero() {
             </div>
           </div>
           <div className="lg:absolute bottom-0 left-[55%]">
-            <div className="relative w-[400px] aspect-[1/1] lg:w-[550px] mx-auto animate-in fade-in slide-in-from-left-8 duration-1000">
+            <div className="relative w-[300px] sm:w-[400px] aspect-[1/1] lg:w-[550px] mx-auto animate-in fade-in slide-in-from-left-8 duration-1000">
               <Image
                 alt="Woman Hero"
                 src="/woman-hero.png"
