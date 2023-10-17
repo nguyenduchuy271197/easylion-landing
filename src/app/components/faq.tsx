@@ -39,7 +39,7 @@ export default function FAQ() {
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-base">
-                    <Markdown>{faq.answer}</Markdown>
+                    <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
                   </AccordionContent>
                 </AccordionItem>
               ))}

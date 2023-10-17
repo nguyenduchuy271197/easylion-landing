@@ -19,8 +19,8 @@ export default function Hero() {
                   합리적인 <span className="text-gradient">개발 가격</span>
                 </Title>
                 <p className="text-foreground/80 text-xl sm:text-2xl animate-in fade-in slide-in-from-top-5 duration-700 fill-mode-backwards delay-300">
-                  EASYLION은 단순한 비지니스 파트너가 아닙니다. 우리는 함께
-                  성장하는 동반자 입니다.
+                  EASYLION은 단순한 비지니스 파트너가 아닙니다. <br /> 우리는
+                  함께 성장하는 동반자 입니다.
                 </p>
               </div>
               <div className="animate-in fade-in slide-in-from-top-5 duration-700 fill-mode-backwards delay-700">

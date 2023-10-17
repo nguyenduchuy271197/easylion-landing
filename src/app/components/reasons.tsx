@@ -3,6 +3,7 @@ import { REASONS } from "@/constants";
 import { cn, groupArray } from "@/lib/utils";
 import Image from "next/image";
 import { HTMLAttributes } from "react";
+import Markdown from "react-markdown";
 
 interface Reason {
   title: string;
@@ -17,18 +18,26 @@ function ReasonCard({
   title,
   description,
   src,
+  highlight,
   className,
   ...props
 }: ReasonCardProps) {
   return (
     <div
-      className={cn("relative p-8 sm:p-12 rounded-lg bg-muted/50", className)}
+      className={cn(
+        "relative p-8 sm:p-12 rounded-lg bg-muted/50",
+        highlight ? "md:bg-muted/90" : "md:bg-muted/50",
+        className
+      )}
       {...props}
     >
       <div className="flex flex-col gap-12 pb-44">
         <div className="space-y-4">
           <h3 className="text-xl sm:text-2xl font-bold">{title}</h3>
-          <p className="text-lg text-foreground/70">{description}</p>
+          <p
+            className="text-lg text-foreground/70"
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
         </div>
         <div className="absolute bottom-0 right-0">
           <div className="relative w-[330px] sm:w-[400px] aspect-[16/9] self-end">
@@ -56,13 +65,7 @@ function ReasonLayout({ reasons }: { reasons: Reason[] }) {
           )}
         >
           {reasons.map((reason) => (
-            <ReasonCard
-              key={reason.title}
-              {...reason}
-              className={cn(
-                reason.highlight ? "md:bg-muted/90" : "md:bg-muted/50"
-              )}
-            />
+            <ReasonCard key={reason.title} {...reason} />
           ))}
         </div>
       ))}

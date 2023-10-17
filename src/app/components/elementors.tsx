@@ -1,5 +1,3 @@
-"use client";
-
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Title } from "@/components/ui/title";
 import Image from "next/image";
