@@ -3,6 +3,7 @@ import { Title } from "@/components/ui/title";
 import Image from "next/image";
 import CountUp from "@/components/count-up";
 import { ELEMENTORS } from "@/constants";
+import Balancer from "react-wrap-balancer";
 
 interface Elementor {
   value: number;
@@ -40,14 +41,15 @@ export default function Elementors() {
               variant="h2"
               className="mx-auto lg:text-left sm:max-w-lg lg:mx-0 space-y-2"
             >
-              <div>
+              <Balancer>
                 각 분야 <span className="text-gradient">전문 개발자</span>로
                 구성된 팀
-              </div>
-              <div>
+              </Balancer>
+
+              <Balancer>
                 <span className="text-gradient">전세계 고객</span>
                 에게 뛰어난 고객경험
-              </div>
+              </Balancer>
             </Title>
             <div className="grid gap-12 sm:grid-cols-2 sm:gap-8">
               {ELEMENTORS.map((elementor) => (
