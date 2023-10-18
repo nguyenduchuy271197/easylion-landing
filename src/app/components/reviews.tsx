@@ -52,7 +52,7 @@ export default function Reviews() {
     <section id="reviews">
       <div className="container">
         <div className="space-y-16">
-          <Title variant="h2">고객리뷰 ❤️</Title>
+          <Title variant="h2">고객리뷰 💙</Title>
           <Carousel>
             {REVIEWS.map((review, index) => (
               <SwiperSlide key={index}>
