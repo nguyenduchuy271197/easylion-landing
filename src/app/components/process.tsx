@@ -17,7 +17,7 @@ export default function Process() {
                   key={index}
                   className="flex flex-col gap-4 p-8 border-2 rounded-lg sm:flex-row sm:items-center sm:gap-8 bg-muted/50"
                 >
-                  <div className="font-bold text-green-300/10 text-7xl sm:text-8xl shrink-0">
+                  <div className="font-bold text-blue-300/10 text-7xl sm:text-8xl shrink-0">
                     {index + 1}
                   </div>
                   <div className="flex-1 space-y-2">

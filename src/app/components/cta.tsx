@@ -5,7 +5,7 @@ export default function CTA() {
   return (
     <section>
       <div className="max-w-screen-lg mx-auto px-8">
-        <div className="px-8 pt-12 md:pb-12 rounded-3xl bg-gradient-to-r from-green-400 via-green-600 to-green-600 relative flex flex-col items-end gap-4">
+        <div className="px-8 pt-12 md:pb-12 rounded-3xl bg-gradient-to-r from-blue-400 via-blue-600 to-blue-600 relative flex flex-col items-end gap-4">
           <div className="flex flex-col items-center md:items-start gap-4 md:max-w-md text-center md:text-left max-w-none">
             <div className="space-y-4">
               <h3 className="text-2xl font-bold sm:text-3xl">

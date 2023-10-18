@@ -49,6 +49,8 @@
 
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
+    /* --primary: 217 100% 50%;
+    --primary-foreground: 210 40% 98%; */
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -92,7 +94,11 @@
   }
 
   .text-gradient {
-    @apply bg-clip-text dark:bg-gradient-to-b text-transparent dark:from-green-500 dark:to-green-600;
+    @apply bg-clip-text dark:bg-gradient-to-b text-transparent dark:from-blue-400 dark:to-blue-500;
+  }
+
+  .background-gradient {
+    @apply bg-gradient-to-r from-blue-400 to-blue-600;
   }
 }
 
