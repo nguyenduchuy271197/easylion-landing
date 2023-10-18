@@ -11,14 +11,14 @@ const buttonVariants = cva(
       variant: {
         // default: "bg-primary text-primary-foreground hover:bg-primary/90",
         default:
-          "bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500/90 hover:to-blue-600/90 shadow-[0_8px_16px_0_rgba(255,255,255,0.2),0_10px_24px_0_rgba(255,255,255,0.19)]",
+          "bg-gradient-to-r from-primary to-primary hover:from-primary/90 hover:to-primary/90 shadow-[0_8px_16px_0_rgba(255,255,255,0.2),0_10px_24px_0_rgba(255,255,255,0.19)]",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
           "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        // secondary:
-        //   "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        secondary: "bg-primary text-primary-foreground hover:bg-primary/90",
+        secondary:
+          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        // secondary: "bg-primary text-primary-foreground hover:bg-primary/90",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
       },

@@ -5,7 +5,6 @@ import "swiper/css/navigation";
 
 import type { Metadata } from "next";
 import { Quicksand } from "next/font/google";
-import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import ReactQueryProvider from "@/components/react-query-provider";
@@ -34,20 +33,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={quicksandFont.className} suppressHydrationWarning={true}>
         <ReactQueryProvider>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <StickyButtonProvider>
-              <Navbar />
-              <main>{children}</main>
-              <Footer />
-              <Toaster position="top-center" />
-              <Chat />
-            </StickyButtonProvider>
-          </ThemeProvider>
+          <StickyButtonProvider>
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
+            <Toaster position="top-center" />
+            <Chat />
+          </StickyButtonProvider>
         </ReactQueryProvider>
       </body>
     </html>
