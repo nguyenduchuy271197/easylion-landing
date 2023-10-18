@@ -9,7 +9,7 @@ export default function ApplyPage() {
         <div className="space-y-8 sm:space-y-16">
           <div className="space-y-6">
             <Image
-              src="/form.png"
+              src="/icons/form.png"
               alt="Apply Form"
               width={60}
               height={60}

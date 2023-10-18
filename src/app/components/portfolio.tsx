@@ -8,7 +8,7 @@ export default function Portfolio() {
         <div className="space-y-16">
           <div className="space-y-6">
             <Image
-              src="/book.png"
+              src="/icons/book.png"
               alt="Book"
               width={60}
               height={60}
