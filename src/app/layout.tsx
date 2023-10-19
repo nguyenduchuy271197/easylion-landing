@@ -12,6 +12,7 @@ import ReactQueryProvider from "@/components/react-query-provider";
 import { Toaster } from "sonner";
 import Chat from "@/components/chat";
 import StickyButtonProvider from "@/providers/stick-button-provider";
+import GoogleAnalytics from "@/components/google-analytics";
 
 const quicksandFont = Quicksand({
   subsets: ["vietnamese"],
@@ -41,6 +42,9 @@ export default function RootLayout({
             <Chat />
           </StickyButtonProvider>
         </ReactQueryProvider>
+        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+          <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+        ) : null}
       </body>
     </html>
   );
