@@ -35,6 +35,7 @@ export default function Process() {
                 alt="Process"
                 fill
                 className="object-cover"
+                sizes="(min-width: 640px) 100vw, 50vw"
               />
             </div>
           </div>

@@ -34,6 +34,7 @@ export default function Hero() {
                 alt="Woman Hero"
                 src="/woman-hero.png"
                 className="mx-auto object-contain animate-in fade-in slide-in-from-left-8 duration-1000"
+                sizes="(min-width: 640px) 100vw, 50vw"
                 fill
                 priority
               />

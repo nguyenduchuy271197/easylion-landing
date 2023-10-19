@@ -3,7 +3,6 @@ import { REASONS } from "@/constants";
 import { cn, groupArray } from "@/lib/utils";
 import Image from "next/image";
 import { HTMLAttributes } from "react";
-import Markdown from "react-markdown";
 
 interface Reason {
   title: string;
@@ -41,7 +40,13 @@ function ReasonCard({
         </div>
         <div className="absolute bottom-0 right-0">
           <div className="relative w-[330px] sm:w-[400px] aspect-[16/9] self-end">
-            <Image src={src} alt={title} fill className="object-contain" />
+            <Image
+              src={src}
+              alt={title}
+              fill
+              className="object-contain"
+              sizes="(min-width: 640px) 100vw, 50vw"
+            />
           </div>
         </div>
       </div>

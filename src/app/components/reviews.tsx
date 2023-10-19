@@ -26,7 +26,13 @@ function ReviewCard({
       <div className="flex flex-col justify-center gap-4">
         <div className="flex items-center gap-4 border-b border-foreground/40 pb-4">
           <div className="w-16 h-16 bg-foreground rounded-full shrink-0 flex items-end justify-center overflow-hidden">
-            <Image src={avatar} alt="" width={60} height={60} />
+            <Image
+              src={avatar}
+              alt={name}
+              width={60}
+              height={60}
+              className="h-auto w-auto"
+            />
           </div>
           <div className="space-y-1">
             <div className="text-foreground/80">{profession}</div>
