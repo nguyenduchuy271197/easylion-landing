@@ -66,6 +66,7 @@ export default function Elementors() {
                 src="/discussion.jpg"
                 alt="Advance your journey with expertise around the world"
                 fill
+                sizes="(min-width: 640px) 100vw, 50vw"
                 className="object-cover"
               />
             </AspectRatio>
