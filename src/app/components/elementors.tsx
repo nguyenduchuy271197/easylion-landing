@@ -31,7 +31,7 @@ function Elementor({ value, label, postfix }: Elementor) {
 export default function Elementors() {
   return (
     <section
-      className="dark:bg-[url('/background/elementor-bg.avif')] bg-cover"
+      className="bg-[url('/background/elementor-bg.avif')] bg-cover"
       id="elementors"
     >
       <div className="container">
