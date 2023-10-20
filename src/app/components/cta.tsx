@@ -4,9 +4,9 @@ import CTAButton from "./buttons/cta-button";
 export default function CTA() {
   return (
     <section>
-      <div className="max-w-screen-lg mx-auto px-8">
-        <div className="px-8 pt-12 md:pb-12 rounded-3xl bg-gradient-to-r from-blue-400 via-blue-600 to-blue-600 relative flex flex-col items-end gap-4">
-          <div className="flex flex-col items-center md:items-start gap-4 md:max-w-md text-center md:text-left max-w-none">
+      <div className="max-w-screen-xl mx-auto px-8">
+        <div className="px-8 pt-16 md:pb-16 rounded-3xl bg-gradient-to-r from-blue-400 via-blue-600 to-blue-600 relative flex flex-col items-end gap-4">
+          <div className="flex flex-col items-center md:items-start gap-4 text-center md:text-left lg:pr-28">
             <div className="space-y-4">
               <h3 className="text-2xl font-bold sm:text-3xl">
                 아직 망설여지시나요? <br />
@@ -19,15 +19,14 @@ export default function CTA() {
                 함께 갈 여정에 대해 EASYLION이 가장 큰 힘이 되겠습니다.
               </p>
             </div>
-
             <CTAButton />
           </div>
           <Image
             src="/woman-cta.png"
             alt="Woman CTA"
             className="md:absolute right-[60%] bottom-0 mx-auto h-auto w-auto"
-            width={300}
-            height={300}
+            width={350}
+            height={350}
           />
         </div>
       </div>
