@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Button } from "./ui/button";
 import Logo from "./logo";
 
 const routes = [
@@ -53,13 +52,6 @@ export default function Navbar() {
                   </li>
                 ))}
               </ul>
-            </div>
-            <div className="flex items-center ml-8 gap-4">
-              {/* <Button className="hidden sm:flex">Tham gia ngay</Button> */}
-              {/* <ModeToggle className="hidden sm:flex" /> */}
-              {/* <Button variant="ghost" size="icon" className="md:hidden">
-                <AlignRight className="w-6 h-6" />
-              </Button> */}
             </div>
           </div>
         </div>
