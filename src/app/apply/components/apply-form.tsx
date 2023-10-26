@@ -85,7 +85,7 @@ export default function ApplyForm() {
 
     mutateSendEmail({
       from: "huynguyen@likelion.net",
-      to: "easylion@likelion.net",
+      to: "이지라이언@likelion.net",
       subject: "New application for HR - LIKELION",
       html: html,
     });
@@ -133,7 +133,7 @@ export default function ApplyForm() {
               <FormItem>
                 <FormLabel>이메일</FormLabel>
                 <FormControl>
-                  <Input placeholder="easylion@likelion.net" {...field} />
+                  <Input placeholder="이지라이언@likelion.net" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>

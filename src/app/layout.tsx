@@ -20,9 +20,9 @@ const quicksandFont = Quicksand({
 });
 
 export const metadata: Metadata = {
-  title: "이지라이언 | 쉽다 빠르다",
+  title: "초저가 | 초단기 외주개발",
   description:
-    "EASYLION은 쉽고 빠르게 여러분들의 비지니스 여정을 함께합니다. 보다 빠르고 정확한 프로젝트 성공을 지향합니다.",
+    "이지라이언은 쉽고 빠르게 여러분들의 비지니스 여정을 함께합니다. 보다 빠르고 정확한 프로젝트 성공을 지향합니다.",
 };
 
 export default function RootLayout({

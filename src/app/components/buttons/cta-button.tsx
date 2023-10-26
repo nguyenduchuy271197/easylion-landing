@@ -18,7 +18,7 @@ export default function CTAButton() {
 
   return (
     <Button size="lg" variant="secondary" asChild ref={ref}>
-      <Link href="/apply">사업 성공하기</Link>
+      <Link href="/apply">견적 요청하기</Link>
     </Button>
   );
 }

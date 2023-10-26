@@ -7,12 +7,12 @@ const routes = [
   {
     id: "reasons",
     path: "#reasons",
-    label: "EASYLION 소개",
+    label: "이지라이언 소개",
   },
   {
     id: "elementors",
     path: "#elementors",
-    label: "개발 현황",
+    label: "개발 팀",
   },
   {
     id: "portfolio",
@@ -22,7 +22,7 @@ const routes = [
   {
     id: "process",
     path: "#process",
-    label: "진행 과정",
+    label: "개발 과정",
   },
   {
     id: "reviews",

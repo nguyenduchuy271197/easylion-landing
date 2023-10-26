@@ -14,9 +14,9 @@ export default function CTA() {
                 프로젝트 성공을 빠르게 이끌어보세요
               </h3>
               <p className="text-foreground/70 sm:text-lg">
-                EASYLION은 단순한 외주가 아닙니다. <br /> 함께 비지니스 가치를
+                이지라이언은 단순한 외주가 아닙니다. <br /> 함께 비지니스 가치를
                 극대화 하는 사업 &apos;동반자&apos; 입니다. <br />
-                함께 갈 여정에 대해 EASYLION이 가장 큰 힘이 되겠습니다.
+                함께 갈 여정에 대해 이지라이언이 가장 큰 힘이 되겠습니다.
               </p>
             </div>
             <CTAButton />

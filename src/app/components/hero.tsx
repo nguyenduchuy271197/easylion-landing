@@ -15,13 +15,16 @@ export default function Hero() {
                   variant="h1"
                   className="animate-in fade-in slide-in-from-top-4 duration-700"
                 >
-                  <span className="text-gradient">초단기간</span>
+                  <span className="text-gradient">초저가 </span>
                   <br />
-                  합리적인 <span className="text-gradient">개발 가격</span>
+                  <span className="text-gradient">초단기간</span>
                 </Title>
                 <p className="text-foreground/80 text-xl sm:text-2xl animate-in fade-in slide-in-from-top-5 duration-700 fill-mode-backwards delay-300">
-                  EASYLION은 단순한 비지니스 파트너가 아닙니다. <br /> 우리는
-                  함께 성장하는 동반자 입니다.
+                  <span className="lg:hidden">Web App 외주개발</span>
+                  <span className="hidden lg:block">
+                    이지라이언은 단순한 비지니스 파트너가 아닙니다. 우리는 함께
+                    성장하는 동반자 입니다.
+                  </span>
                 </p>
               </div>
               <div className="animate-in fade-in slide-in-from-top-5 duration-700 fill-mode-backwards delay-700">

@@ -86,10 +86,10 @@ export default function Reasons() {
         <div className="space-y-16">
           <div className="space-y-4">
             <Title variant="h2">
-              왜 <span className="text-gradient">EASYLION</span> 인가요?
+              왜 <span className="text-gradient">이지라이언</span> 인가요?
             </Title>
             <p className="text-xl text-foreground/70">
-              EASYLION은 프로젝트의 A-Z 전 과정을 함께 합니다.
+              이지라이언은 프로젝트의 A-Z 전 과정을 함께 합니다.
             </p>
           </div>
 

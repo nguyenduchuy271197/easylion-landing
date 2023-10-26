@@ -16,7 +16,7 @@ export default function ApplyPage() {
               className="mx-auto"
             />
             <Title variant="h2" className="text-center">
-              EASYLION과 함께 멋진 프로덕트를 만들어볼까요?
+              이지라이언과 함께 멋진 프로덕트를 만들어볼까요?
             </Title>
           </div>
 
