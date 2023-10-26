@@ -29,7 +29,7 @@ export default function Hero() {
               </div>
             </div>
           </div>
-          <div className="lg:absolute bottom-0 left-[55%] lg:w-[600px]">
+          <div className="lg:absolute bottom-0 left-[50%] lg:w-[600px]">
             <AspectRatio
               ratio={1 / 1}
               className="w-full mx-auto max-w-[300px] sm:max-w-[400px]"
