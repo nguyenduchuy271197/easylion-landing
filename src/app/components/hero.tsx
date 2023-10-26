@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="container">
         <div className="relative">
           <div className="lg:h-[calc(100vh-var(--navbar-height))] flex items-center max-w-3xl py-10 max-h-[700px]">
-            <div className="space-y-8 max-w-xl mx-auto text-center lg:text-left">
+            <div className="space-y-8 max-w-xl mx-auto text-center lg:text-left lg:mx-0">
               <div className="space-y-8">
                 <Title
                   variant="h1"
