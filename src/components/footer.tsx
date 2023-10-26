@@ -1,11 +1,9 @@
 import {
   Building2,
-  Clock,
   LucideIcon,
   LucideProps,
   Mail,
   MapPin,
-  PhoneCall,
   ScrollText,
 } from "lucide-react";
 import { Separator } from "./ui/separator";

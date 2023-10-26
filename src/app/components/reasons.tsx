@@ -1,3 +1,4 @@
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Title } from "@/components/ui/title";
 import { REASONS } from "@/constants";
 import { cn, groupArray } from "@/lib/utils";
@@ -39,7 +40,7 @@ function ReasonCard({
           />
         </div>
         <div className="absolute bottom-0 right-0">
-          <div className="relative w-[330px] sm:w-[400px] aspect-[16/9] self-end">
+          <div className="relative min-w-[250px] sm:w-[320px] lg:w-[400px] aspect-[16/9]">
             <Image
               src={src}
               alt={title}

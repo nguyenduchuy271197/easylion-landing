@@ -1,6 +1,7 @@
 import { Title } from "@/components/ui/title";
 import Image from "next/image";
 import HeroButton from "./buttons/hero-button";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 export default function Hero() {
   return (
@@ -28,8 +29,11 @@ export default function Hero() {
               </div>
             </div>
           </div>
-          <div className="lg:absolute bottom-0 left-[55%]">
-            <div className="relative w-[300px] sm:w-[400px] aspect-[1/1] lg:w-[550px] mx-auto">
+          <div className="lg:absolute bottom-0 left-[55%] lg:w-[600px]">
+            <AspectRatio
+              ratio={1 / 1}
+              className="w-full mx-auto max-w-[300px] sm:max-w-[400px]"
+            >
               <Image
                 alt="Woman Hero"
                 src="/woman-hero.png"
@@ -38,7 +42,7 @@ export default function Hero() {
                 fill
                 priority
               />
-            </div>
+            </AspectRatio>
           </div>
         </div>
       </div>
