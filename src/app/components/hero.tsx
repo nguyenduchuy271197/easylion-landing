@@ -22,8 +22,9 @@ export default function Hero() {
                 <p className="text-foreground/80 text-xl sm:text-2xl animate-in fade-in slide-in-from-top-5 duration-700 fill-mode-backwards delay-300">
                   <span className="lg:hidden">Web App 외주개발</span>
                   <span className="hidden lg:block">
-                    이지라이언은 단순한 비지니스 파트너가 아닙니다. 우리는 함께
-                    성장하는 동반자 입니다.
+                    이지라이언은 단순한 비지니스 파트너가 아닙니다.
+                    <br />
+                    우리는 함께 성장하는 동반자 입니다.
                   </span>
                 </p>
               </div>
