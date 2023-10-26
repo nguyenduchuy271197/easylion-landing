@@ -9,15 +9,15 @@ export default function Hero() {
       <div className="container">
         <div className="relative">
           <div className="lg:h-[calc(100vh-var(--navbar-height))] flex items-center max-w-3xl py-10 max-h-[700px]">
-            <div className="space-y-8 max-w-xl">
+            <div className="space-y-8 max-w-xl mx-auto text-center lg:text-left">
               <div className="space-y-8">
                 <Title
                   variant="h1"
                   className="animate-in fade-in slide-in-from-top-4 duration-700"
                 >
-                  <span className="text-gradient">초저가 </span>
+                  <span className="text-gradient">초저가 초단기</span>
                   <br />
-                  <span className="text-gradient">초단기간</span>
+                  <span>웹/앱 개발</span>
                 </Title>
                 <p className="text-foreground/80 text-xl sm:text-2xl animate-in fade-in slide-in-from-top-5 duration-700 fill-mode-backwards delay-300">
                   <span className="lg:hidden">Web App 외주개발</span>
