@@ -8,7 +8,7 @@ export default function Hero() {
     <section className="bg-[url('/background/hero-bg.avif')] bg-right bg-cover pt-[var(--navbar-height)]">
       <div className="container">
         <div className="relative">
-          <div className="lg:h-[calc(100vh-var(--navbar-height))] flex items-center max-w-3xl py-10 max-h-[700px]">
+          <div className="lg:h-[calc(100vh-var(--navbar-height))] flex items-center max-w-3xl py-10 lg:max-h-[700px]">
             <div className="space-y-8 max-w-xl mx-auto text-center lg:text-left lg:mx-0">
               <div className="space-y-8">
                 <Title
@@ -33,15 +33,15 @@ export default function Hero() {
               </div>
             </div>
           </div>
-          <div className="lg:absolute bottom-0 left-[50%] lg:w-[600px]">
+          <div className="lg:absolute bottom-0 left-[50%] lg:w-[630px]">
             <AspectRatio
               ratio={1 / 1}
-              className="w-full mx-auto max-w-[300px] sm:max-w-[400px]"
+              className="w-full mx-auto max-w-[300px] sm:max-w-[400px] lg:max-w-[1200px]"
             >
               <Image
-                alt="Woman Hero"
-                src="/woman-hero.png"
-                className="mx-auto object-contain animate-in fade-in slide-in-from-left-8 duration-1000"
+                alt="Man Hero"
+                src="/man-hero.png"
+                className="mx-auto object-contain animate-in fade-in slide-in-from-left-8 duration-1000 object-bottom"
                 sizes="(min-width: 640px) 100vw, 50vw"
                 fill
                 priority
