@@ -27,6 +27,7 @@ export default function CTA() {
             className="sm:hidden lg:block lg:absolute right-[60%] bottom-0 mx-auto h-auto w-auto"
             width={350}
             height={350}
+            priority
           />
         </div>
       </div>
