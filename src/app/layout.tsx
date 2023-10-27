@@ -13,6 +13,7 @@ import { Toaster } from "sonner";
 import Chat from "@/components/chat";
 import StickyButtonProvider from "@/providers/stick-button-provider";
 import GoogleAnalytics from "@/components/google-analytics";
+import { cn } from "@/lib/utils";
 
 const quicksandFont = Quicksand({
   subsets: ["vietnamese"],
@@ -32,7 +33,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={quicksandFont.className} suppressHydrationWarning={true}>
+      <body
+        className={cn(quicksandFont.className, "overflow-x-hidden")}
+        suppressHydrationWarning={true}
+      >
         <ReactQueryProvider>
           <StickyButtonProvider>
             <Navbar />

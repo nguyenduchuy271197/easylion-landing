@@ -21,14 +21,16 @@ export default function CTA() {
             </div>
             <CTAButton />
           </div>
-          <Image
-            src="/woman-cta.png"
-            alt="Woman CTA"
-            className="sm:hidden lg:block lg:absolute right-[60%] bottom-0 mx-auto h-auto w-auto"
-            width={350}
-            height={350}
-            priority
-          />
+
+          <div className="relative min-w-[180px] w-full sm:max-w-[400px] aspect-[1/1] sm:hidden lg:block lg:absolute lg:right-[60%] bottom-0 mx-auto">
+            <Image
+              src="/woman-cta.png"
+              alt="Woman CTA"
+              className="object-contain object-bottom"
+              fill
+              priority
+            />
+          </div>
         </div>
       </div>
     </section>

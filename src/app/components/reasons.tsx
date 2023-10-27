@@ -40,12 +40,12 @@ function ReasonCard({
           />
         </div>
         <div className="absolute bottom-0 right-0">
-          <div className="relative min-w-[250px] sm:w-[320px] lg:w-[400px] aspect-[16/9]">
+          <div className="relative min-w-[200px] sm:w-[250px] lg:w-[300px] aspect-[1/1]">
             <Image
               src={src}
               alt={title}
               fill
-              className="object-contain"
+              className="object-contain object-bottom"
               sizes="(min-width: 640px) 100vw, 50vw"
             />
           </div>
