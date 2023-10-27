@@ -33,11 +33,8 @@ export default function Hero() {
               </div>
             </div>
           </div>
-          <div className="lg:absolute bottom-0 left-[50%] lg:w-[630px]">
-            <AspectRatio
-              ratio={1 / 1}
-              className="w-full mx-auto max-w-[300px] sm:max-w-[400px] lg:max-w-[1200px]"
-            >
+          <div className="lg:absolute bottom-0 left-[50%]">
+            <div className="relative lg:w-[550px] w-full mx-auto max-w-[300px] sm:max-w-[400px] lg:max-w-[550px] aspect-square">
               <Image
                 alt="Man Hero"
                 src="/man-hero.png"
@@ -46,7 +43,7 @@ export default function Hero() {
                 fill
                 priority
               />
-            </AspectRatio>
+            </div>
           </div>
         </div>
       </div>
